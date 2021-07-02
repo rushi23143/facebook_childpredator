@@ -1,0 +1,39 @@
+{% load static %}
+{% block body %}
+<body style="background-color: lightblue;">
+<div class="container" style="margin-top:30px">
+    <center><h2 class="text-center" style="color: white;">Users Images Predatior</h2></center>
+    <br><br><br>
+    <style>
+        table, th, td {
+          color: white;
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        
+        table.center {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        body {
+     background: url('https://www.setaswall.com/wp-content/uploads/2017/06/Facebook-Wallpapers-06-3840-x-2400.jpg') fixed;
+    background-size: cover;
+}
+        </style>
+    <table class="center">
+        <tr>
+            <th>User Image</th>
+            <th>User Posted_date</th>
+            <th>User Name</th>
+        </tr>
+        {% for i in imgpre %}
+        <tr>
+            <td>{{i.photo}}</td>
+            <td>{{i.date}}</td>
+            <td>{{i.name}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+</div>
+{% endblock %}
+</body>

@@ -1,0 +1,35 @@
+{% load static %}
+{% block body %}
+<body style="background-color: lightblue;">
+<div class="container" style="margin-top:30px">
+    <center><h2 class="text-center" style="color: white;">Friend List</h2></center>
+    <br><br><br>
+    <style>
+        table, th, td {
+          color: white;
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        
+        table.center {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        body {
+     background: url('https://www.setaswall.com/wp-content/uploads/2017/06/Facebook-Wallpapers-06-3840-x-2400.jpg') fixed;
+    background-size: cover;
+}
+        </style>
+    <table class="center">
+        <tr>
+            <th>Friends</th>
+        </tr>
+        {% for i in frndlist %}
+        <tr>
+            <td>{{i.friends}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+</div>
+{% endblock %}
+</body>
